@@ -1,0 +1,462 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+  --transition: transform 0.7s ease-in-out;
+}
+
+/* Evitamos problemas con las imagenes */
+
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+
+  text-decoration: none;
+  color: white;
+  font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+
+
+/* Reseteamos las tablas */
+
+/* Evitamos problemas con los SVG */
+
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: 100%;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+span {
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+
+
+.header {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  justify-content: center;
+  align-items: center;
+  background-image: url("hombre-sonriente-bodega-tiro-medio_23-2149428824.jpg");
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-position: center;
+  background-size: cover;
+
+}
+
+.nav {
+  padding: 30px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 30PX;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 50px;
+
+}
+
+.nav__container {
+
+  display: flex;
+  gap: 40px;
+  justify-content: right;
+  height: 20px;
+  align-items: center;
+  max-width: 50%;
+}
+
+.nav a {
+
+  display: flex;
+}
+
+.login {
+  height: 50px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.foto__usuario {
+  width: 20px;
+  border-radius: 40px;
+}
+
+.nombre__usuario {
+  font-size: calc(1vw + 5px);
+}
+
+.carrito {
+  filter: invert(1);
+  width: 20px;
+}
+
+.btn {
+  width: 130px;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+}
+
+.header__lema {
+  min-width: 300px;
+  grid-column: 3/5;
+  grid-row: 5/6;
+}
+
+.header__sublema {
+  min-width: 300px;
+  grid-column: 3;
+  grid-row: 6;
+  align-self: baseline;
+}
+
+.linea {
+  border-top: 1px solid rgb(148, 0, 0);
+  height: 2px;
+  width: 50px;
+  margin-top: 10px;
+}
+
+.buttons {
+  display: grid;
+  grid-column: 3;
+  grid-row: 7;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: subgrid;
+}
+
+.btn__discover__wines {
+  background-color: rgb(161, 0, 89);
+  grid-column: 1;
+}
+
+.btn__support__help {
+  border: 1px solid rgb(255, 255, 255);
+  grid-column: 2;
+}
+
+.wine__container {
+  position: relative;
+  z-index: 33033;
+  width: 220px;
+  height: 400px;
+  background-color: #fff;
+  grid-column: 7;
+  grid-row: 5/8;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  justify-items: center;
+  align-items: center;
+  color: black;
+
+
+}
+
+.wine__container p {
+  color: rgb(161, 0, 89);
+  font-size: 15px;
+  opacity: .6;
+
+}
+
+.wine__container__circulo {
+  position: absolute;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  border: 7px solid rgb(255, 255, 255);
+  background-color: rgb(161, 0, 89);
+  left: 80px;
+  top: -30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.grape {
+  width: 20px;
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.botella {
+  width: 60px;
+  grid-column: 4 / 6;
+  grid-row: 2/ 5;
+  align-self: baseline;
+}
+
+.star {
+  width: 10px;
+}
+
+.star__opacy {
+  opacity: .4;
+}
+
+.wine__description {
+  grid-column: 2/6;
+  grid-row: 7/8;
+}
+
+.more {
+  grid-column: 2/4;
+  grid-row: 8;
+  justify-self: left;
+}
+
+.add {
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 3px;
+  border: 1px solid black;
+  border-radius: 3px;
+  grid-column: 5/8;
+  grid-row: 8;
+  justify-self: left;
+  color: rgb(161, 0, 89);
+}
+
+.glass {
+  width: 50px;
+}
+
+.alter__nav {
+  position: relative;
+  bottom: 50px;
+  margin: 0 auto;
+  height: 100px;
+  display: flex;
+  width: 80%;
+  background-color: #fff;
+
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+
+.alter__nav>a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  font-size: 1vw;
+  color: black;
+
+}
+
+.alter__nav img {
+  width: 4vw;
+}
+
+.main {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  row-gap: 50px;
+  flex-wrap: wrap;
+  background-color: rgb(224, 218, 219);
+}
+
+main>div {
+  min-width: 200px;
+}
+
+.wine1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.wine2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.wine3 {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.wine4 {
+  grid-column: 4;
+  grid-row: 1;
+}
+
+.wine5 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.wine6 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.wine7 {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.wine8 {
+  grid-column: 4;
+  grid-row: 2;
+}
+
+.load_more {
+  margin: 0 auto;
+  margin-top: 50px;
+  background-color: rgb(161, 0, 89);
+
+}
+
+.footer {
+  margin: 0 auto;
+  margin-top: 50px;
+  height: 500px;
+  background-color: black;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.newsletter {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.envelope {
+  fill: #fff;
+  color: #fff;
+  width: 20px;
+  stroke: #fff;
+}
+
+.entrada {
+  color: rgb(0, 0, 0);
+  background-color: rgb(148, 143, 143);
+}
+
+.linea__larga {
+  margin: 0 auto;
+
+
+  width: 80%;
+  border: 1px solid rgb(37, 37, 37);
+  height: 2px;
+}
+
+.footer__end>div {
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__end {
+display: flex;
+gap: 50px;
+font-size: 10px;
+
+
+
+}
+.linea__corta {
+  width: 20px;
+}
+
+.opacy {
+  opacity: .3;
+}

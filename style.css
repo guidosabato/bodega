@@ -71,6 +71,11 @@ q:after {
 
 /* Evitamos problemas con los SVG */
 
+:root {
+  --main__color: white;
+  --second__color: rgb(158, 29, 104);
+  --thirds__color: black
+}
 
 html {
   font-size: 100%;
@@ -93,49 +98,37 @@ span {
 }
 
 h1 {
-  font-size: calc(4vw +3);
+  font-size: calc(3vw +3);
 }
 
 
 .header {
   height: 100vh;
-  width: 100%;
   display: grid;
-  grid-template-columns: repeat(7, autofill (minmax(200px)));
-  grid-template-rows: repeat(10, 1fr);
-  justify-items: center;
-  align-items: center;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(7, 1fr);
   background-image: url("hombre-sonriente-bodega-tiro-medio_23-2149428824.jpg");
   background-repeat: no-repeat;
   background-origin: border-box;
   background-position: center;
   background-size: cover;
-
 }
 
 .nav {
   padding: 30px;
   position: fixed;
-  left: 0;
-  top: 0;
   width: 100%;
   height: 30PX;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-  gap: 50px;
-
 }
 
 .nav__container {
-
   display: flex;
   gap: 40px;
-  justify-content: right;
   height: 20px;
   align-items: center;
-  max-width: 50%;
 }
 
 .nav a {
@@ -174,23 +167,23 @@ h1 {
   justify-content: center;
   align-items: center;
   font-size: 10px;
+  justify-self: start;
 }
 
 .header__lema {
-
-  grid-column: 3/5;
-  grid-row: 5/6;
+  grid-column: 2/4;
+  grid-row: 4;
+  align-items: end;
 }
 
 .header__sublema {
-
-  grid-column: 3;
-  grid-row: 6;
-  align-self: baseline;
+  grid-column: 2/4;
+  grid-row: 4;
+  align-self: last baseline
 }
 
 .linea {
-  border-top: 1px solid rgb(148, 0, 0);
+  border-top: 1px solid var(--second__color);
   height: 2px;
   width: 50px;
   margin-top: 10px;
@@ -198,46 +191,40 @@ h1 {
 
 .buttons {
   display: grid;
-  grid-column: 3;
-  grid-row: 7;
+  grid-column: 2/3;
+  grid-row: 5;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: subgrid;
   justify-items: center;
 }
 
 .btn__discover__wines {
-  background-color: rgb(161, 0, 89);
+  background-color: var(--second__color);
   grid-column: 1;
 }
 
 .btn__support__help {
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid var(--main__color);
   grid-column: 2;
 }
 
 .wine__container {
   position: relative;
-  z-index: 33033;
   width: 220px;
   height: 400px;
-  background-color: #fff;
-  grid-column: 7;
-  grid-row: 5/8;
+  background-color: var(--main__color);
+  grid-column: 4/6;
+  grid-row: 3/6;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(8, 1fr);
-  justify-items: center;
-  align-items: center;
-  color: black;
-
-
+  color: var(--thirds__color);
 }
 
 .wine__container p {
-  color: rgb(161, 0, 89);
+  color: var(--second__color);
   font-size: 15px;
   opacity: .6;
-
 }
 
 .wine__container__circulo {
@@ -245,21 +232,17 @@ h1 {
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  border: 7px solid rgb(255, 255, 255);
-  background-color: rgb(161, 0, 89);
+  border: 7px solid var(--main__color);
+  background-color: var(--second__color);
   left: 80px;
   top: -30px;
   display: flex;
   justify-content: center;
   align-items: center;
-
-
 }
 
-.grape {
-  width: 20px;
-  grid-column: 1;
-  grid-row: 2;
+.wine0 {
+  scale: .7;
 }
 
 .botella {
@@ -267,6 +250,11 @@ h1 {
   grid-column: 4 / 6;
   grid-row: 2/ 5;
   align-self: baseline;
+}
+
+.wine__description {
+  grid-column: 2/6;
+  grid-row: 7/8;
 }
 
 .star {
@@ -277,47 +265,39 @@ h1 {
   opacity: .4;
 }
 
-.wine__description {
-  grid-column: 2/6;
-  grid-row: 7/8;
-}
 
 .more {
   grid-column: 2/4;
   grid-row: 8;
+  display: flex;
   justify-self: left;
+  align-items: center;
 }
 
 .add {
   text-transform: uppercase;
   font-size: 12px;
-  padding: 3px;
-  border: 1px solid black;
+  border: 1px solid var(--thirds__color);
   border-radius: 3px;
   grid-column: 5/8;
   grid-row: 8;
-  justify-self: left;
-  color: rgb(161, 0, 89);
-}
-
-.glass {
-  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--second__color);
 }
 
 .alter__nav {
   position: relative;
-  bottom: 50px;
+  bottom: 20px;
   margin: 0 auto;
   height: 100px;
   display: flex;
   width: 80%;
-  background-color: #fff;
+  background-color: var(--main__color);
   justify-content: center;
   align-items: center;
-
 }
-
-
 
 .alter__nav>a {
   display: flex;
@@ -326,7 +306,6 @@ h1 {
   width: 20%;
   font-size: calc(1vw +3px);
   color: black;
-
 }
 
 .alter__nav img {
@@ -341,57 +320,19 @@ h1 {
   align-items: center;
   row-gap: 50px;
   flex-wrap: wrap;
-  background-color: rgb(224, 218, 219);
+  background-color: var(--main__color)
 }
 
 main>div {
   min-width: 200px;
 }
 
-.wine1 {
-  grid-column: 1;
-  grid-row: 1;
-}
 
-.wine2 {
-  grid-column: 2;
-  grid-row: 1;
-}
-
-.wine3 {
-  grid-column: 3;
-  grid-row: 1;
-}
-
-.wine4 {
-  grid-column: 4;
-  grid-row: 1;
-}
-
-.wine5 {
-  grid-column: 1;
-  grid-row: 2;
-}
-
-.wine6 {
-  grid-column: 2;
-  grid-row: 2;
-}
-
-.wine7 {
-  grid-column: 3;
-  grid-row: 2;
-}
-
-.wine8 {
-  grid-column: 4;
-  grid-row: 2;
-}
 
 .load_more {
   margin: 0 auto;
   margin-top: 50px;
-  background-color: rgb(161, 0, 89);
+  background-color: var(--second__color);
 
 }
 
@@ -399,7 +340,7 @@ main>div {
   margin: 0 auto;
   margin-top: 50px;
   height: 500px;
-  background-color: black;
+  background-color: var(--thirds__color);
   width: 80%;
   display: flex;
   justify-content: space-around;
@@ -411,29 +352,23 @@ main>div {
 .newsletter {
   width: 300px;
   margin: 0 auto;
-  margin-top: 50px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-
 }
 
 .envelope {
-  fill: #fff;
-  color: #fff;
+  fill: var(--main__color);
   width: 20px;
-  stroke: #fff;
 }
 
 .entrada {
-  color: rgb(0, 0, 0);
+  color: var(--thirds__color);
   background-color: rgb(148, 143, 143);
 }
 
 .linea__larga {
   margin: 0 auto;
-
-
   width: 80%;
   border: 1px solid rgb(37, 37, 37);
   height: 2px;
@@ -449,9 +384,6 @@ main>div {
   display: flex;
   gap: 50px;
   font-size: 10px;
-
-
-
 }
 
 .linea__corta {
@@ -463,51 +395,52 @@ main>div {
 }
 
 @media (max-width: 600px) {
-  .wine0 {
-    display: none;
-  }
+
 
   .login {
     display: none;
   }
 
-  .nav {
-    position: static;
-    display: flex;
-    font-size: 12px;
-  }
 
-  .nav__container {
-    max-width: 100%;
-    justify-content: space-around;
+  .wine0 {
+    display: none;
   }
 
   .header__lema,
-  .header__sublema
-    {
-    grid-column: 1/7;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .header__sublema {
+    grid-column: 2/5;
+    justify-self: center;
     text-align: center;
+    justify-content: center;
+  }
+
+  .header__lema {
+    grid-row: 5/6;
+  }
+
+  .header__sublema {
+    grid-row: 6;
+    align-self: baseline;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 
   .buttons {
-    grid-column: 1/7;
-    grid-row: 8;
+    grid-column: 2/5;
+    grid-row: 7/8;
+    justify-self: center;
   }
 
-  
   .main {
     margin-top: 100px;
     width: 100%;
   }
-.alter__nav {
-  
-  flex-wrap: wrap;
-  width: 100%;
-}
+
+  .alter__nav {
+    flex-wrap: wrap;
+    width: 100%;
+  }
 
   .alter__nav>a {
     width: 200px;

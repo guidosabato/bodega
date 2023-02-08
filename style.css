@@ -93,16 +93,15 @@ span {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 4vw;
 }
-
 
 
 .header {
   height: 100vh;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(10, autofill (minmax(200px)));
   grid-template-rows: repeat(10, 1fr);
   justify-content: center;
   align-items: center;
@@ -122,6 +121,7 @@ h1 {
   width: 100%;
   height: 30PX;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
   gap: 50px;
@@ -129,7 +129,6 @@ h1 {
 }
 
 .nav__container {
-
   display: flex;
   gap: 40px;
   justify-content: right;
@@ -139,8 +138,8 @@ h1 {
 }
 
 .nav a {
-
   display: flex;
+
 }
 
 .login {
@@ -177,13 +176,13 @@ h1 {
 }
 
 .header__lema {
-  min-width: 300px;
+
   grid-column: 3/5;
   grid-row: 5/6;
 }
 
 .header__sublema {
-  min-width: 300px;
+  
   grid-column: 3;
   grid-row: 6;
   align-self: baseline;
@@ -311,7 +310,6 @@ h1 {
   display: flex;
   width: 80%;
   background-color: #fff;
-
   justify-content: center;
   align-items: center;
 
@@ -460,3 +458,46 @@ font-size: 10px;
 .opacy {
   opacity: .3;
 }
+
+@media (max-width: 600px){
+  .wine0 {
+    display: none;
+  }
+  .login {
+    display: none;
+  }
+  .alter__nav {
+    position: static;
+    margin-top: 50px;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+  .main {
+    margin-top: 50px;
+  }
+
+.alter__nav>img {
+  width: 100px;
+}
+
+.footer  main{
+  width: 100%;
+  margin: 0 auto;
+}
+.newsletter {
+  margin: 0 auto;
+flex-direction: column;
+  width: 100%;
+ }
+ .entrada {
+  width: 70%;
+ }
+
+ .footer__end {
+  flex-wrap: wrap;
+  justify-content: center;
+ }
+  }

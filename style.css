@@ -93,7 +93,7 @@ span {
 }
 
 h1 {
-  font-size: 4vw;
+  font-size: calc(4vw +3);
 }
 
 
@@ -101,9 +101,9 @@ h1 {
   height: 100vh;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(10, autofill (minmax(200px)));
+  grid-template-columns: repeat(7, autofill (minmax(200px)));
   grid-template-rows: repeat(10, 1fr);
-  justify-content: center;
+  justify-items: center;
   align-items: center;
   background-image: url("hombre-sonriente-bodega-tiro-medio_23-2149428824.jpg");
   background-repeat: no-repeat;
@@ -129,6 +129,7 @@ h1 {
 }
 
 .nav__container {
+
   display: flex;
   gap: 40px;
   justify-content: right;
@@ -182,7 +183,7 @@ h1 {
 }
 
 .header__sublema {
-  
+
   grid-column: 3;
   grid-row: 6;
   align-self: baseline;
@@ -201,6 +202,7 @@ h1 {
   grid-row: 7;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: subgrid;
+  justify-items: center;
 }
 
 .btn__discover__wines {
@@ -322,7 +324,7 @@ h1 {
   align-items: center;
   justify-content: center;
   width: 20%;
-  font-size: 1vw;
+  font-size: calc(1vw +3px);
   color: black;
 
 }
@@ -444,13 +446,14 @@ main>div {
 }
 
 .footer__end {
-display: flex;
-gap: 50px;
-font-size: 10px;
+  display: flex;
+  gap: 50px;
+  font-size: 10px;
 
 
 
 }
+
 .linea__corta {
   width: 20px;
 }
@@ -459,45 +462,75 @@ font-size: 10px;
   opacity: .3;
 }
 
-@media (max-width: 600px){
+@media (max-width: 600px) {
   .wine0 {
     display: none;
   }
+
   .login {
     display: none;
   }
-  .alter__nav {
+
+  .nav {
     position: static;
-    margin-top: 50px;
-    width: 100%;
-    flex-wrap: wrap;
+    display: flex;
+    font-size: 12px;
+  }
+
+  .nav__container {
+    max-width: 100%;
+    justify-content: space-around;
+  }
+
+  .header__lema,
+  .header__sublema
+    {
+    grid-column: 1/7;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+    text-align: center;
   }
+
+  .buttons {
+    grid-column: 1/7;
+    grid-row: 8;
+  }
+
+  
   .main {
-    margin-top: 50px;
+    margin-top: 100px;
+    width: 100%;
   }
-
-.alter__nav>img {
-  width: 100px;
-}
-
-.footer  main{
-  width: 100%;
-  margin: 0 auto;
-}
-.newsletter {
-  margin: 0 auto;
-flex-direction: column;
-  width: 100%;
- }
- .entrada {
-  width: 70%;
- }
-
- .footer__end {
+.alter__nav {
+  
   flex-wrap: wrap;
-  justify-content: center;
- }
+  width: 100%;
+}
+
+  .alter__nav>a {
+    width: 200px;
+    padding: 10px;
   }
+
+  .footer {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .newsletter {
+    margin: 0 auto;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .entrada {
+    width: 70%;
+  }
+
+  .footer__end {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

@@ -4,86 +4,32 @@
   border: 0;
   box-sizing: border-box;
   vertical-align: baseline;
-  --transition: transform 0.7s ease-in-out;
 }
 
-/* Evitamos problemas con las imagenes */
 
-
-/* Reseteamos los enlaces para funcionar como cajas... */
 a {
 
   text-decoration: none;
-  color: white;
+  color: var(--main__color);
   font-size: inherit;
 }
 
-/* ... excepto los que se encuentran en párrafos */
-p a {
-  display: inline;
-}
-
-/* Quitamos los puntos de los <li> */
-li {
-  list-style-type: none;
-}
-
-/* Configuramos anclas suaves */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Desactivamos estilos por defecto de las principales etiquetas de texto */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span,
-a,
-strong,
-blockquote,
-i,
-b,
-u,
-em {
-
-  font-weight: inherit;
-  font-style: inherit;
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Evitamos problemas con los pseudoelementos de quotes */
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-
-
-
-/* Reseteamos las tablas */
-
-/* Evitamos problemas con los SVG */
 
 :root {
   --main__color: white;
   --second__color: rgb(158, 29, 104);
-  --thirds__color: black
+  --thirds__color: black;
+  --fourth__color: rgb(255, 163, 213);
 }
 
 html {
   font-size: 100%;
+  background-color: var(--fourth__color);
 }
 
 body {
   font-size: 100%;
-  color: white;
+  color: var(--main__color);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -107,11 +53,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(7, 1fr);
-  background-image: url("hombre-sonriente-bodega-tiro-medio_23-2149428824.jpg");
-  background-repeat: no-repeat;
-  background-origin: border-box;
-  background-position: center;
-  background-size: cover;
+  background: url("hombre-sonriente-bodega-tiro-medio_23-2149428824.jpg") center/cover no-repeat;
 }
 
 .nav {
@@ -125,23 +67,22 @@ h1 {
 }
 
 .nav__container {
-  display: flex;
-  gap: 40px;
   height: 20px;
+  display: flex;
   align-items: center;
+  gap: 40px;
 }
 
 .nav a {
   display: flex;
-
 }
 
 .login {
   height: 50px;
   display: flex;
-  gap: 20px;
   justify-content: space-around;
   align-items: center;
+  gap: 20px;
   flex-wrap: nowrap;
 }
 
@@ -155,19 +96,19 @@ h1 {
 }
 
 .carrito {
-  filter: invert(1);
   width: 20px;
+  filter: invert(1);
 }
 
 .btn {
   width: 130px;
   height: 40px;
-  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 10px;
   justify-self: start;
+  font-size: 10px;
+  border-radius: 5px;
 }
 
 .header__lema {
@@ -199,37 +140,36 @@ h1 {
 }
 
 .btn__discover__wines {
-  background-color: var(--second__color);
   grid-column: 1;
+  background-color: var(--second__color);
 }
 
 .btn__support__help {
-  border: 1px solid var(--main__color);
   grid-column: 2;
+  border: 1px solid var(--main__color);
 }
 
 .wine__container {
   position: relative;
   width: 220px;
   height: 400px;
-  background-color: var(--main__color);
   grid-column: 4/6;
   grid-row: 3/6;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(8, 1fr);
   color: var(--thirds__color);
+  background-color: var(--main__color);
 }
 
 .wine__container p {
-  color: var(--second__color);
   font-size: 15px;
+  color: var(--second__color);
   opacity: .6;
 }
 
 .wine__container__circulo {
   position: absolute;
-  border-radius: 50%;
   width: 60px;
   height: 60px;
   border: 7px solid var(--main__color);
@@ -239,6 +179,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 50%;
 }
 
 .wine0 {
@@ -246,10 +187,10 @@ h1 {
 }
 
 .botella {
-  width: 60px;
   grid-column: 4 / 6;
   grid-row: 2/ 5;
   align-self: baseline;
+  width: 60px;
 }
 
 .wine__description {
@@ -272,6 +213,7 @@ h1 {
   display: flex;
   justify-self: left;
   align-items: center;
+  color: var(--third__color);
 }
 
 .add {
@@ -282,52 +224,48 @@ h1 {
   grid-column: 5/8;
   grid-row: 8;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  place-content: center;
+  align-self: center;
   color: var(--second__color);
 }
 
 .alter__nav {
   position: relative;
   bottom: 20px;
-  margin: 0 auto;
   height: 100px;
   display: flex;
-  width: 80%;
   background-color: var(--main__color);
-  justify-content: center;
-  align-items: center;
+  place-content: center;
 }
 
 .alter__nav>a {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 20%;
   font-size: calc(1vw +3px);
-  color: black;
+  color: var(--second__color);
 }
 
 .alter__nav img {
   width: 4vw;
 }
 
-.main {
-  width: 80%;
-  margin: 0 auto;
+.main__wines {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  row-gap: 50px;
   flex-wrap: wrap;
+  gap: 40px;
   background-color: var(--main__color)
 }
 
-main>div {
-  min-width: 200px;
+
+
+.percent80 {
+  margin: 0 auto;
+  width: 80vw;
 }
-
-
 
 .load_more {
   margin: 0 auto;
@@ -368,14 +306,12 @@ main>div {
 }
 
 .linea__larga {
-  margin: 0 auto;
-  width: 80%;
   border: 1px solid rgb(37, 37, 37);
   height: 2px;
 }
 
 .footer__end>div {
-  width: 80px;
+
   display: flex;
   flex-direction: column;
 }
@@ -397,12 +333,7 @@ main>div {
 @media (max-width: 600px) {
 
 
-  .login {
-    display: none;
-  }
-
-
-  .wine0 {
+  .login, .wine0 {
     display: none;
   }
 
@@ -422,8 +353,8 @@ main>div {
     grid-row: 6;
     align-self: baseline;
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
   }
 
   .buttons {
@@ -432,23 +363,24 @@ main>div {
     justify-self: center;
   }
 
-  .main {
-    margin-top: 100px;
-    width: 100%;
-  }
-
   .alter__nav {
     flex-wrap: wrap;
     width: 100%;
   }
-
+  .main {
+    margin-top: 100px;
+  }
+.percent80 {
+  margin: 0 auto;
+  width: 100vw;
+}
   .alter__nav>a {
     width: 200px;
     padding: 10px;
   }
 
   .footer {
-    width: 100%;
+    width: 100vw;
     margin: 0 auto;
   }
 

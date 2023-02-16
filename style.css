@@ -142,8 +142,8 @@ h1 {
 
 .wine__container {
   position: relative;
-  width: 220px;
-  height: 400px;
+  width: 25vw;
+  height: 100vh;
   grid-column: 4/6;
   grid-row: 3/6;
   display: grid;
@@ -151,6 +151,7 @@ h1 {
   grid-template-rows: repeat(8, 1fr);
   color: var(--thirds__color);
   background-color: var(--main__color);
+  box-shadow: 4px 4px 4px rgb(99, 99, 99);
 }
 
 .wine__container p {
@@ -243,17 +244,18 @@ h1 {
 }
 
 .main__wines {
+  margin: 2em 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   gap: 40px;
-  background-color: var(--main__color)
+  background-color: rgb(226, 226, 226)
 }
 
 
 
-.percent80 {
+.container_80 {
   margin: 0 auto;
   width: 80vw;
 }
@@ -268,7 +270,7 @@ h1 {
 .footer {
   margin: 0 auto;
   margin-top: 50px;
-  height: 500px;
+  min-height: 65vh;
   background-color: var(--thirds__color);
   width: 80%;
   display: flex;
@@ -279,11 +281,11 @@ h1 {
 }
 
 .newsletter {
-  width: 300px;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  gap: 20px;
 }
 
 .envelope {

@@ -142,7 +142,7 @@ h1 {
 
 .wine__container {
   position: relative;
-  width: 25vw;
+  width: 150px;
   height: 100vh;
   grid-column: 4/6;
   grid-row: 3/6;
@@ -151,7 +151,7 @@ h1 {
   grid-template-rows: repeat(8, 1fr);
   color: var(--thirds__color);
   background-color: var(--main__color);
-  box-shadow: 4px 4px 4px rgb(99, 99, 99);
+
 }
 
 .wine__container p {
@@ -166,7 +166,7 @@ h1 {
   height: 60px;
   border: 7px solid var(--main__color);
   background-color: var(--second__color);
-  left: 80px;
+  left: 45px;
   top: -30px;
   display: flex;
   justify-content: center;
@@ -209,16 +209,16 @@ h1 {
 }
 
 .add {
+  grid-column: 5/8;
+  grid-row: 8;
+  display: flex;
+text-align: center;
+  align-items: center;
+  color: var(--second__color);
   text-transform: uppercase;
   font-size: 12px;
   border: 1px solid var(--thirds__color);
   border-radius: 3px;
-  grid-column: 5/8;
-  grid-row: 8;
-  display: flex;
-  place-content: center;
-  align-self: center;
-  color: var(--second__color);
 }
 
 .alter__nav {
@@ -250,7 +250,7 @@ h1 {
   align-items: center;
   flex-wrap: wrap;
   gap: 40px;
-  background-color: rgb(226, 226, 226)
+  background-color: rgb(196, 196, 196)
 }
 
 
